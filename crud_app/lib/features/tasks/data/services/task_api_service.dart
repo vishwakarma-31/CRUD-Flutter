@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import '../../../core/constants.dart';
 import '../models/task_model.dart';
 
 class TaskApiService {
   final http.Client client;
-  final String baseUrl = 'http://localhost:3000/tasks'; // change if needed
+  final String baseUrl = '${AppConstants.apiBaseUrl}${AppConstants.tasksEndpoint}';
 
   TaskApiService(this.client);
 
